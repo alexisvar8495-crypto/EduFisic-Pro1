@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduFisic Pro | El Olimpo Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#323537",
+                        "on-primary": "#002a78",
+                        "primary": "#b4c5ff",
+                        "accent-success": "#10B981",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "electric-blue": "#2563EB",
+                        "surface-container-high": "#272a2c",
+                        "surface-container-highest": "#323537",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary": "#272377",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "accent-danger": "#EF4444",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed": "#100563",
+                        "tertiary-container": "#656d84",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "surface-container-low": "#191c1e",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-background": "#e0e3e5",
+                        "surface-container": "#1d2022",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary": "#283044",
+                        "on-secondary-fixed-variant": "#3e3c8f",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary": "#bec6e0",
+                        "background": "#101415",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#0053db",
+                        "surface-container-lowest": "#0b0f10",
+                        "action-indigo": "#312E81",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "on-secondary-container": "#afadff",
+                        "outline-variant": "#434655",
+                        "surface-navy": "#1E1B4B",
+                        "surface-dim": "#101415",
+                        "tertiary-fixed": "#dae2fd",
+                        "background-deep": "#0F172A",
+                        "on-primary-fixed": "#00174b",
+                        "secondary-fixed": "#e2dfff",
+                        "surface-tint": "#b4c5ff",
+                        "surface-bright": "#363a3b",
+                        "inverse-on-surface": "#2d3133",
+                        "on-surface-variant": "#c3c6d7",
+                        "inverse-surface": "#e0e3e5",
+                        "outline": "#8d90a0",
+                        "on-tertiary-container": "#eef0ff",
+                        "secondary": "#c3c0ff",
+                        "secondary-container": "#3e3c8f",
+                        "error": "#ffb4ab",
+                        "surface": "#101415",
+                        "on-surface": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "base": "4px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Manrope"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "label-md": ["JetBrains Mono"],
+                        "headline-md": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent),
+                        radial-gradient(circle at bottom left, rgba(62, 60, 143, 0.2), transparent);
+        }
+        .card-glow:active {
+            box-shadow: 0px 0px 20px rgba(37, 99, 235, 0.2);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .horizontal-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes heartbeat {
+            0%, 100% { 
+                transform: scale(1); 
+                box-shadow: 0 0 15px rgba(180, 197, 255, 0.2);
+                filter: brightness(1);
+            }
+            45%, 55% {
+                transform: scale(1.08); 
+                box-shadow: 0 0 35px rgba(180, 197, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
+                filter: brightness(1.3);
+            }
+            50% { 
+                transform: scale(1.1); 
+                box-shadow: 0 0 45px rgba(180, 197, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+                filter: brightness(1.5);
+            }
+        }
+        .animate-heartbeat {
+            animation: heartbeat 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background-deep text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
+<!-- Top AppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/10 flex justify-between items-center px-margin-mobile h-16">
+<a class="flex items-center gap-3" href="index.html">
+<img alt="EduFisic Pro Logo" class="w-10 h-10 object-contain rounded-lg shadow-sm border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ6V0ED_zFz5DbcV6UrirC6oSEiNAv2aDYghIOj3-KzNimaZy9791AMdxKCCu9IzJ4Wu0Ou49y3yxO_MFdR8xUXBFXkTZq8KXHQZlfUt8w1sIQ3gl7RQdWtGNIgkO_jLcoloL0Vj_f0wgWAvii9X-WacIHMvZ5KfvC31I01yAFngE0gZplbvDnxqf5B66xC1mX0NvplBYrgzL1w4p6k1tn9lde5aIE3Rcqwg2qsuku31mG8qmPVCuk_v5zwlcejF2QY6a8avuOMMaK"/>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">EduFisic Pro</span>
+</a>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="search">search</span>
+<a class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center" href="perfil.html">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-16 pb-24 min-h-screen hero-gradient">
+<!-- Hero Section -->
+<section class="px-margin-mobile pt-stack-lg pb-stack-lg text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full mb-6">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Plataforma #1</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-2">EduFisic Pro</h1>
+<p class="font-headline-md text-headline-md text-primary mb-6">EL OLIMPO DIGITAL</p>
+<div class="relative max-w-md mx-auto">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-navy border border-outline-variant/30 rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all outline-none placeholder:text-on-surface-variant/50" placeholder="Buscar deporte (ej. fútbol, trompo...)" type="text"/>
+</div>
+</section>
+<!-- Main Bento Grid Services -->
+<section class="px-margin-mobile mb-stack-lg">
+<h2 class="font-headline-md text-headline-md mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="explore">explore</span>
+                ¿Qué puedes hacer aquí?
+            </h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Library -->
+<a class="col-span-1 p-4 bg-surface-navy border border-outline-variant/10 rounded-xl card-glow active:scale-95 transition-transform duration-200" href="biblioteca.html">
+<span class="material-symbols-outlined text-primary mb-3 text-[32px]" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<h3 class="font-headline-md text-headline-md text-[16px] leading-tight mb-1">Biblioteca</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant line-clamp-2">Reglas y anatomía</p>
+</a>
+<!-- AI Routines -->
+<a class="col-span-1 p-4 bg-primary-container text-on-primary-container border border-white/10 rounded-xl card-glow active:scale-95 transition-transform duration-200" href="chat-ia.html">
+<span class="material-symbols-outlined mb-3 text-[32px]" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<h3 class="font-headline-md text-headline-md text-[16px] leading-tight mb-1">Rutinas IA</h3>
+<p class="font-label-sm text-label-sm opacity-80">Planes personalizados</p>
+</a>
+<!-- News -->
+<a class="col-span-2 p-4 bg-surface-navy border border-outline-variant/10 rounded-xl flex items-center justify-between card-glow active:scale-95 transition-transform duration-200" href="noticias.html">
+<div>
+<h3 class="font-headline-md text-headline-md text-[16px] mb-1">Noticias Deportivas</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Lo último del mundo atlético</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="newspaper">newspaper</span>
+</a>
+<!-- Videos -->
+<div class="col-span-1 p-4 bg-surface-navy border border-outline-variant/10 rounded-xl card-glow">
+<span class="material-symbols-outlined text-primary mb-3" data-icon="play_circle">play_circle</span>
+<h3 class="font-headline-md text-headline-md text-[16px] leading-tight mb-1">Tutoriales</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Técnicas en HD</p>
+</div>
+<!-- First Aid -->
+<a class="col-span-1 p-4 bg-surface-navy border border-outline-variant/10 rounded-xl card-glow active:scale-95 transition-transform duration-200" href="primeros-auxilios.html">
+<span class="material-symbols-outlined text-accent-danger mb-3" data-icon="medical_services">medical_services</span>
+<h3 class="font-headline-md text-headline-md text-[16px] leading-tight mb-1">Primeros Auxilios</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Protocolos RICE</p>
+</a>
+</div>
+</section>
+<!-- Featured Section: Deportes de Equipo -->
+<section class="mb-stack-lg">
+<div class="px-margin-mobile flex justify-between items-end mb-stack-sm">
+<h2 class="font-headline-md text-headline-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+                    Deportes de Equipo
+                </h2>
+<a class="font-label-md text-label-md text-primary uppercase" href="biblioteca.html">Ver todos</a>
+</div>
+<div class="flex overflow-x-auto gap-4 px-margin-mobile horizontal-scroll pt-2">
+<!-- Football -->
+<a class="min-w-[260px] h-40 relative rounded-xl overflow-hidden border border-outline-variant/20 flex-shrink-0" href="biblioteca.html">
+<img alt="Fútbol" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ0tu9B1JxatUmmQPNBEDmOe-lbGHBAigWFkSNsqcvQpTs62hWUxECoS3bvB0YahK5Tf3KKp9oBB-BDCYCePVKcaKjQXUBvQKEn730flVFLJIYNqUrmZAbH9wuAQ1wSlIjXu3yoXCyZjBq56SvkUStQVWmPy0cqQFyYqrGxIAyon_5MdiaxSMP-238TEpL18exbbUgA9jN0fPYzs6FPBKxl-QjTTXcNjO7bIRT1eJVyLcXGPisMyxT4_NrO_xgzYDbatlQKbGMuVHo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-deep/90 via-transparent to-transparent flex items-end p-4">
+<span class="font-headline-md text-headline-md text-on-surface">Fútbol</span>
+</div>
+</a>
+<!-- Béisbol -->
+<a class="min-w-[260px] h-40 relative rounded-xl overflow-hidden border border-outline-variant/20 flex-shrink-0" href="biblioteca.html">
+<img alt="Béisbol" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKjBmJ9QGzagjf-P4jq_-pnS4EMNFvcUpXtc1pALjw2YXjWrIvyGmI3arzss2JUyTDg5uOv1DQZHr0OYH-nRIdWJ1TUrmr1pwPLkMXjpZ5vFQvxRAwe2SawQf466Zifi-I3Y2psCi1BOyKEGuOnfEim8a8PimgYUmviNu780FZGah9TWZuRmnXladHp043EMdLDJSMGIY4quVr4uP43TRiQmqJJ0LxeadzYXBP-789Wfk0uFhQ9VInMM94RVEHNyxvsbjBNToSDFJZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-deep/90 via-transparent to-transparent flex items-end p-4">
+<span class="font-headline-md text-headline-md text-on-surface">Béisbol</span>
+</div>
+</a>
+<!-- Béisbol 5 -->
+<a class="min-w-[260px] h-40 relative rounded-xl overflow-hidden border border-outline-variant/20 flex-shrink-0" href="biblioteca.html">
+<img alt="Béisbol 5" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFJZPRu6Q_YMoTZTLYMxitWBfkiG8MWJAjeu9vOzLy9PTmndNzgiX3a7YpCjdwUR5UFY0C_VlpMIdBPhnILNwN6lEkzXDLdfGMnHyeesb6wHU3Nx1GInIsehn9bc-eI1SyuVfcsTMgTww-ry3C8MDBOJ-DUg6YrA9lksqqd9Ir6VJ2vffap9yNSDVBg-6hc0UAY7Nvp6u3ab6JG0hQVnP3kLkyHB1hCVShwXItdogQcdJEFa8B1V9UGjeqD24qNmwaNErtI6X-Fz_y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-deep/90 via-transparent to-transparent flex items-end p-4">
+<span class="font-headline-md text-headline-md text-on-surface">Béisbol 5</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Traditional Games Section -->
+<section class="mb-stack-lg">
+<div class="px-margin-mobile flex justify-between items-end mb-stack-sm">
+<h2 class="font-headline-md text-headline-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="stadia_controller">stadia_controller</span>
+                    Juegos Tradicionales
+                </h2>
+<a class="font-label-md text-label-md text-primary uppercase" href="biblioteca.html">Explorar</a>
+</div>
+<div class="flex overflow-x-auto gap-4 px-margin-mobile horizontal-scroll pt-2">
+<!-- Metras -->
+<a class="min-w-[180px] h-48 relative rounded-xl overflow-hidden border border-outline-variant/20 flex-shrink-0" href="biblioteca.html">
+<img alt="Metras" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugr2NUIBQ6jZd7ylN0wKuGSDssZVwtWK9-8cpMSctbq-9uM1EAv9-qUTpfCxw18Btaz5R--DKarG1CmvSoZkHICGqVQ1qv8X6TeJHP13LzwmHVorNQlSuGSYj4VhK7MQ9opINwCBojs0F8ZwWRftVCSO4oJ92d2diPOigFkc8SSAkMszOUc3OyuDfVo1Q4zfnjZ-RPqIMsVmwrOsorzwQPg4GkfV4c84X_bjnJDeAnTUlvHxYuoYZU-u8iQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-deep/90 via-transparent to-transparent flex items-end p-3">
+<span class="font-headline-md text-headline-md text-[14px] text-on-surface">Metras</span>
+</div>
+</a>
+<!-- Trompo -->
+<a class="min-w-[180px] h-48 relative rounded-xl overflow-hidden border border-outline-variant/20 flex-shrink-0" href="biblioteca.html">
+<img alt="Trompo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uim5JzBWUgwvUkUyNwhvmZu96-_cW7t1Sa97H2l67tPOW2mQOY52BIswO3EQfanzCo3WMivrjC4bYBGG0N0RM9LBoTjk0yG0SvwWn9Y--EceSDojxIn6kqWdr3bcqEYzw6G-TShI-_quBCplep1dOHcsuZby4JN2ScBjXMSKdjqkF8sTse5mIXXq6nFUq0kkS4w_4r25qZM2RtbyhHvCaEvHEgFWopR4juA8LABbb5I2ib8VxMQF8GuwIrT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-deep/90 via-transparent to-transparent flex items-end p-3">
+<span class="font-headline-md text-headline-md text-[14px] text-on-surface">Trompo</span>
+</div>
+</a>
+<!-- Perinola -->
+<a class="min-w-[180px] h-48 relative rounded-xl overflow-hidden border border-outline-variant/20 flex-shrink-0" href="biblioteca.html">
+<img alt="Perinola" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmo3j1EBUUIJFhn6Yiw38_-MfVUubzb1UEUf8Npli59UAMvZVEwxUjs1imzBNqWXoN3EbRejN5dkFQX6Cnj5_Sr6zYA1gzW4esvjJpjDN7XIh-QW53tm6uFA4DMMGUOAyvUwVIEsNJf95WhHFIZsXlr3GrdFDQ54T_4KT0WmkE_5iqKL9F0V7qHjvJBYlVjMqZpLFRTL2_6W7mkTVl2V2Swx7-fR1rYoj5ktoyHdj0qC_QHwogoDHHiaT0CqVx4hM6McDuVzcISbXR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-deep/90 via-transparent to-transparent flex items-end p-3">
+<span class="font-headline-md text-headline-md text-[14px] text-on-surface">Perinola</span>
+</div>
+</a>
+<!-- Yo-Yo -->
+<a class="min-w-[180px] h-48 relative rounded-xl overflow-hidden border border-outline-variant/20 flex-shrink-0" href="biblioteca.html">
+<img alt="Yo-Yo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxszRk_qaOFWKqBUp6siXyXWhhHBCYsbbPEsxNHXdmwRwWEJKzUDHuCJiS-xm6-uzN7QFCB8nyzhZQORfhJDWem7y9e1VdsyOuG8PGHgx7iowlJZQelFN4fvi1yhbSTspRU2vJwn9kyfHjvd2toueWDLdbrofysi0AlT79LMUUygfYGdfhUmLra5DfR0dBTPrp8ZIbune62m-PdG1FOoDLwTm-N-kHWbsCvLk7ljEbB9MnNU3zFwm7nLhR1pHJNIeHwmplIAzGEEZu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-deep/90 via-transparent to-transparent flex items-end p-3">
+<span class="font-headline-md text-headline-md text-[14px] text-on-surface">Yo-Yo</span>
+</div>
+</a>
+</div>
+</section>
+<!-- AI Assistant Promo Section -->
+<section class="px-margin-mobile mb-stack-lg">
+<div class="p-8 bg-gradient-to-br from-primary via-surface-navy to-action-indigo border border-primary/30 rounded-3xl relative overflow-hidden shadow-[0_20px_50px_rgba(37,99,235,0.3)] ring-1 ring-white/10">
+<div class="absolute -right-16 -top-16 w-48 h-48 bg-primary/20 blur-[60px] rounded-full"></div>
+<div class="absolute -left-16 -bottom-16 w-48 h-48 bg-electric-blue/20 blur-[60px] rounded-full"></div>
+<div class="flex flex-col items-center text-center relative z-10">
+<div class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 border border-white/30 shadow-inner animate-heartbeat">
+<span class="material-symbols-outlined text-[48px] text-primary" data-icon="robot_2" style="font-variation-settings: 'FILL' 1;">robot_2</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-white mb-3 tracking-tight">Conoce a Alex</h2>
+<p class="font-body-lg text-body-lg text-white/80 mb-8 max-w-[280px]">Tu asistente experto en anatomía, reglas y entrenamiento disponible 24/7.</p>
+<a class="w-full py-4 bg-white text-action-indigo font-headline-md text-headline-md rounded-2xl active:scale-[0.97] transition-all shadow-[0_10px_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-3 hover:bg-on-primary-fixed duration-300" href="chat-ia.html">
+<span class="material-symbols-outlined" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+                        Hablar con Alex
+                    </a>
+<div class="mt-6 flex items-center gap-2 px-3 py-1 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
+<span class="material-symbols-outlined text-[14px] text-accent-success" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-white/70">Powered by Olimpo AI</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Text -->
+<footer class="px-margin-mobile text-center pb-8 opacity-40">
+<p class="font-label-sm text-label-sm">Hecho con ? para la Educación Física venezolana</p>
+<p class="font-label-sm text-label-sm mt-1">APP CREADA POR AYA</p>
+</footer>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container/90 backdrop-blur-xl border-t border-outline-variant/10 shadow-lg flex justify-around items-center h-20 pb-safe px-2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="biblioteca.html">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-sm text-label-sm">Biblioteca</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="noticias.html">
+<span class="material-symbols-outlined" data-icon="newspaper">newspaper</span>
+<span class="font-label-sm text-label-sm">Noticias</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-150" href="chat-ia.html">
+<span class="material-symbols-outlined" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="font-label-sm text-label-sm">Chat IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="primeros-auxilios.html">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-label-sm text-label-sm">Salud</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="social.html">
+<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
+<span class="font-label-sm text-label-sm">Social</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.card-glow').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Sticky header opacity on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-surface-dim/95');
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('bg-surface-dim/95');
+                header.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body></html>

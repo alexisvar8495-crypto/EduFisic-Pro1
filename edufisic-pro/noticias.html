@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduFisic Pro - Noticias y Estadísticas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#b4c5ff",
+                        "on-secondary-fixed": "#100563",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-primary-fixed": "#00174b",
+                        "background-deep": "#0F172A",
+                        "error-container": "#93000a",
+                        "surface-tint": "#b4c5ff",
+                        "action-indigo": "#312E81",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-primary": "#002a78",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-variant": "#323537",
+                        "on-surface": "#e0e3e5",
+                        "surface-container": "#1d2022",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed-variant": "#3e3c8f",
+                        "secondary-container": "#3e3c8f",
+                        "accent-success": "#10B981",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "surface-dim": "#101415",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "surface-container-highest": "#323537",
+                        "on-secondary-container": "#afadff",
+                        "inverse-primary": "#0053db",
+                        "on-error": "#690005",
+                        "surface-bright": "#363a3b",
+                        "inverse-on-surface": "#2d3133",
+                        "on-secondary": "#272377",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-surface-variant": "#c3c6d7",
+                        "electric-blue": "#2563EB",
+                        "tertiary": "#bec6e0",
+                        "inverse-surface": "#e0e3e5",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e0e3e5",
+                        "surface": "#101415",
+                        "secondary-fixed": "#e2dfff",
+                        "primary-fixed": "#dbe1ff",
+                        "outline-variant": "#434655",
+                        "accent-danger": "#EF4444",
+                        "secondary": "#c3c0ff",
+                        "surface-container-low": "#191c1e",
+                        "surface-container-high": "#272a2c",
+                        "tertiary-fixed": "#dae2fd",
+                        "background": "#101415",
+                        "on-tertiary": "#283044",
+                        "surface-navy": "#1E1B4B",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "tertiary-container": "#656d84",
+                        "on-tertiary-container": "#eef0ff",
+                        "outline": "#8d90a0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "gutter": "16px",
+                        "margin-desktop": "32px",
+                        "stack-md": "16px",
+                        "base": "4px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-md": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0F172A;
+            color: #e0e3e5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(29, 32, 34, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #434655;
+            border-radius: 10px;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        @keyframes pulse-live {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .live-indicator {
+            animation: pulse-live 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md-mobile md:text-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/10 flex justify-between items-center px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-high transition-colors p-2 rounded-full active:scale-95 duration-200">menu</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight md:font-headline-md md:text-headline-md">EduFisic Pro</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-high transition-colors p-2 rounded-full active:scale-95 duration-200">search</button>
+</div>
+</header>
+<main class="pt-20 pb-24 px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto">
+<!-- Header con Fecha -->
+<section class="mb-stack-lg animate-in fade-in duration-700">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-2">
+<div>
+<span class="font-label-sm text-label-sm text-electric-blue uppercase tracking-widest">Perspectivas Globales</span>
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface">Noticias &amp; Estadísticas</h2>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md bg-surface-navy/40 px-4 py-2 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>24 de Mayo, 2026</span>
+</div>
+</div>
+</section>
+<!-- Flash Informativo -->
+<section class="mb-stack-lg">
+<div class="flex items-center gap-2 mb-stack-md">
+<span class="material-symbols-outlined text-accent-danger live-indicator" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Flash Informativo</h3>
+<span class="ml-auto bg-accent-danger/10 text-accent-danger text-[10px] px-2 py-0.5 rounded-full font-bold uppercase live-indicator">ÚLTIMO MINUTO</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Primary News: Vinotinto -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-navy border border-outline-variant/10 hover:shadow-[0px_0px_20px_rgba(37,99,235,0.2)] transition-all duration-300">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img alt="Fotografía de acción de la Vinotinto en un estadio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0be70oAXAVdf_cYjdRRL54bcOk5j_Ibd7hOyYzx17uJUL0s6Vy-zcEA7-GxKCIZmDumTFAjylnB8ZwPMJvOrK6yIaqp68goOOlczSzzb6Hm4D8uTGgyw-MNf4wmt1jqR_Pk2-Ppq8FQgcNof9V3MdatRHYNd5_ehLcVQIuMgjxiffConoEls1_MiDk_dKE9khF6Ea3dzGQe51PXzBom9EAQCtZaS21plaGZ1aKJH5uxvD8Tb8M9Zp7lOTeaeAwLZVvUTDh-hSLRYZ"/>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md bg-gradient-to-t from-background-deep via-background-deep/80 to-transparent">
+<div class="flex gap-2 mb-2">
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded font-label-sm text-label-sm">MUNDIAL 2026</span>
+<span class="bg-accent-success/20 text-accent-success px-2 py-0.5 rounded font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-accent-success rounded-full live-indicator"></span> EN VIVO
+                        </span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">La Vinotinto prepara su asalto final: Concentración en Margarita</h4>
+<p class="text-on-surface-variant line-clamp-2 mb-4">El seleccionador nacional confirma que el equipo está al 100% para la doble fecha eliminatoria. Los entrenamientos de alta intensidad en el CNAR muestran un bloque sólido y motivado.</p>
+<button class="flex items-center gap-2 text-primary font-label-md text-label-md hover:underline active:scale-95 transition-transform">
+                        LEER MÁS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Secondary News: Jackson Chourio -->
+<div class="md:col-span-4 flex flex-col gap-4">
+<div class="flex-1 group bg-surface-navy p-stack-md rounded-xl border border-outline-variant/10 hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-sm text-label-sm text-primary">DESEMPEÑO MLB</span>
+<span class="text-[10px] text-accent-success font-bold flex items-center gap-1">ACTUALIZADO</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Jackson Chourio: El fenómeno de los Brewers no tiene techo</h4>
+<p class="text-on-surface-variant text-sm line-clamp-3 mb-4">Con un promedio de .312 y 15 bases robadas en lo que va de mayo, el zuliano se posiciona como el favorito al MVP de la Liga Nacional.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Hace 2 horas</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">trending_up</span>
+</div>
+</div>
+</div>
+<div class="bg-primary-container p-stack-md rounded-xl text-on-primary-container relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-8xl">speed</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold mb-1 relative z-10">DATO EN TIEMPO REAL</h5>
+<p class="text-display-lg-mobile font-display-lg-mobile relative z-10">98.4<span class="text-sm">mph</span></p>
+<p class="text-sm opacity-80 relative z-10">Velocidad de salida promedio del último Home Run de Chourio.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tablero de Estadísticas (Grid Bento) -->
+<section class="mb-stack-lg">
+<div class="flex items-center justify-between mb-stack-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Tablero de Estadísticas</h3>
+</div>
+<button class="text-primary font-label-sm text-label-sm flex items-center gap-1">VER TODO <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- MLB Leaders -->
+<div class="bg-surface-navy rounded-xl border border-outline-variant/10 overflow-hidden">
+<div class="p-4 border-b border-outline-variant/10 flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface">Venezolanos en MLB</span>
+<img alt="Icono minimalista de béisbol" class="h-6 w-6 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3hjtGrRv1OnrJm9RIFABxOI1NXkX0vSnj4GkCN_9XBe076oOVrG7TVFXbihy5s7rqtCyQx7_-5RFcsto53-Nw8x6aLriQn3Lf8Zb_CPfI10vn8pyMFeQxFTeHFvNojGSQM8TS-NKwsdvpDsQTLRS2UqJF15pmv7-tn0pX6SZNmdS6Uyv4lU-B2Z4SyPRF2v7GJTmbLoZ2KpGD-6JxACiNenRibYdEsps6hOCgJrThWMl4rNWaS5z7dawonpd9QMiih47psf3a7jKb"/>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-label-sm text-on-surface">JC</div>
+<div>
+<p class="text-sm font-bold text-on-surface">J. Chourio</p>
+<p class="text-xs text-outline">MIL | RF</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary">.312 AVG</p>
+<p class="text-xs text-accent-success flex items-center justify-end gap-1"><span class="material-symbols-outlined text-[10px]">arrow_upward</span>0.005</p>
+</div>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-label-sm text-on-surface">AC</div>
+<div>
+<p class="text-sm font-bold text-on-surface">A. Contreras</p>
+<p class="text-xs text-outline">MIL | C</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">12 HR</p>
+<p class="text-xs text-outline">Rank #3</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SPB Standings -->
+<div class="bg-surface-navy rounded-xl border border-outline-variant/10 p-4 relative overflow-hidden">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-label-md text-label-md text-on-surface">Superliga SPB</h4>
+<span class="bg-accent-success/10 text-accent-success text-[10px] px-2 py-0.5 rounded-full font-bold uppercase live-indicator">EN VIVO</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-2 bg-surface-container-low rounded-lg border border-outline-variant/10">
+<span class="font-label-md text-label-md text-primary">1</span>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface">Gladiadores de Anz.</p>
+<div class="w-full bg-surface-variant h-1.5 rounded-full mt-1">
+<div class="bg-electric-blue h-full rounded-full w-[92%] shadow-[0_0_8px_rgba(37,99,235,0.5)]"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">12-1</span>
+</div>
+<div class="flex items-center gap-3 p-2">
+<span class="font-label-md text-label-md text-outline">2</span>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface-variant">Cocodrilos de Ccs.</p>
+<div class="w-full bg-surface-variant h-1.5 rounded-full mt-1">
+<div class="bg-outline h-full rounded-full w-[78%]"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10-3</span>
+</div>
+<div class="flex items-center gap-3 p-2">
+<span class="font-label-md text-label-md text-outline">3</span>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface-variant">Trotamundos de Car.</p>
+<div class="w-full bg-surface-variant h-1.5 rounded-full mt-1">
+<div class="bg-outline h-full rounded-full w-[70%]"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">9-4</span>
+</div>
+</div>
+</div>
+<!-- Live Performance Tracker -->
+<div class="bg-surface-navy rounded-xl border border-outline-variant/10 p-4 flex flex-col justify-between">
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-2">Monitor Académico</h4>
+<p class="text-xs text-on-surface-variant">Rendimiento promedio en Pruebas de Esfuerzo (Nacional)</p>
+</div>
+<div class="py-4 flex justify-center">
+<div class="relative h-24 w-24">
+<svg class="h-full w-full" viewbox="0 0 36 36">
+<path class="stroke-surface-variant fill-none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-width="3"></path>
+<path class="stroke-primary fill-none transition-all duration-1000 shadow-[0_0_10px_rgba(180,197,255,0.3)]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="font-display-lg-mobile text-headline-md text-primary">85%</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="text-center p-2 bg-surface-container-high rounded-lg border border-outline-variant/10">
+<p class="text-[10px] text-outline uppercase">Resistencia</p>
+<p class="text-sm font-bold text-on-surface">+12%</p>
+</div>
+<div class="text-center p-2 bg-surface-container-high rounded-lg border border-outline-variant/10">
+<p class="text-[10px] text-outline uppercase">Flexibilidad</p>
+<p class="text-sm font-bold text-on-surface">+5%</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tendencias en Educación Física (Horizontal Scroll / Glass Cards) -->
+<section class="mb-stack-lg">
+<div class="flex items-center gap-2 mb-stack-md">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Tendencias</h3>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 custom-scrollbar">
+<!-- Trend 1 -->
+<div class="min-w-[280px] md:min-w-[400px] bg-surface-navy/50 backdrop-blur-md rounded-xl border border-outline-variant/10 p-6 flex gap-4 hover:border-primary/40 transition-all cursor-pointer">
+<div class="h-16 w-16 bg-action-indigo rounded-lg flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">neurology</span>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-1">Neuroeducación</h4>
+<p class="text-sm text-on-surface-variant mb-3">Cómo el ejercicio aeróbico potencia la sinapsis y el aprendizaje cognitivo en adolescentes.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-outline">timer</span>
+<span class="text-xs text-outline font-label-sm">5 min lectura</span>
+</div>
+</div>
+</div>
+<!-- Trend 2 -->
+<div class="min-w-[280px] md:min-w-[400px] bg-surface-navy/50 backdrop-blur-md rounded-xl border border-outline-variant/10 p-6 flex gap-4 hover:border-primary/40 transition-all cursor-pointer">
+<div class="h-16 w-16 bg-surface-container-highest rounded-lg flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-success text-3xl">sports_esports</span>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-1">Gamificación 2.0</h4>
+<p class="text-sm text-on-surface-variant mb-3">Implementación de RPGs en la pista de atletismo para aumentar la adherencia deportiva.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-outline">timer</span>
+<span class="text-xs text-outline font-label-sm">8 min lectura</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container/90 backdrop-blur-xl border-t border-outline-variant/10 shadow-lg flex justify-around items-center h-20 pb-safe px-2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="biblioteca.html">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm">Biblioteca</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 transition-all active:scale-90 duration-150" href="noticias.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">newspaper</span>
+<span class="font-label-sm text-label-sm">Noticias</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="chat.html">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-label-sm text-label-sm">Chat IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="salud.html">
+<span class="material-symbols-outlined">medical_services</span>
+<span class="font-label-sm text-label-sm">Salud</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="social.html">
+<span class="material-symbols-outlined">diversity_3</span>
+<span class="font-label-sm text-label-sm">Social</span>
+</a>
+</nav>
+<script>
+    document.querySelectorAll('.group').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // Interactive effects could be added here
+        });
+    });
+</script>
+</body></html>

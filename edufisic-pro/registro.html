@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduFisic Pro - Registro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#656d84",
+                    "on-primary-fixed": "#00174b",
+                    "on-tertiary-fixed": "#131b2e",
+                    "secondary-container": "#3e3c8f",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-background": "#e0e3e5",
+                    "on-secondary": "#272377",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "outline": "#8d90a0",
+                    "on-surface": "#e0e3e5",
+                    "background-deep": "#0F172A",
+                    "inverse-on-surface": "#2d3133",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#3e3c8f",
+                    "action-indigo": "#312E81",
+                    "secondary-fixed": "#e2dfff",
+                    "tertiary-fixed": "#dae2fd",
+                    "primary": "#b4c5ff",
+                    "on-tertiary": "#283044",
+                    "inverse-primary": "#0053db",
+                    "accent-danger": "#EF4444",
+                    "tertiary": "#bec6e0",
+                    "on-primary": "#002a78",
+                    "primary-container": "#2563eb",
+                    "surface-container-highest": "#323537",
+                    "surface-container-lowest": "#0b0f10",
+                    "primary-fixed": "#dbe1ff",
+                    "secondary": "#c3c0ff",
+                    "electric-blue": "#2563EB",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface-bright": "#363a3b",
+                    "on-secondary-fixed": "#100563",
+                    "accent-success": "#10B981",
+                    "surface-container-high": "#272a2c",
+                    "surface-dim": "#101415",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "inverse-surface": "#e0e3e5",
+                    "background": "#101415",
+                    "on-secondary-container": "#afadff",
+                    "surface-tint": "#b4c5ff",
+                    "surface-variant": "#323537",
+                    "on-error": "#690005",
+                    "on-primary-container": "#eeefff",
+                    "outline-variant": "#434655",
+                    "on-surface-variant": "#c3c6d7",
+                    "surface-navy": "#1E1B4B",
+                    "surface-container": "#1d2022",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#191c1e",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "on-tertiary-container": "#eef0ff",
+                    "surface": "#101415",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "margin-desktop": "32px",
+                    "stack-lg": "32px",
+                    "gutter": "16px",
+                    "stack-sm": "8px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "label-sm": ["JetBrains Mono"],
+                    "body-md": ["Manrope"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-button:hover {
+            box-shadow: 0px 0px 20px rgba(37, 99, 235, 0.4);
+        }
+        .bg-mesh {
+            background-color: #0F172A;
+            background-image: radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(49, 46, 129, 0.2) 0px, transparent 50%);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-deep text-on-background font-body-md text-body-md selection:bg-electric-blue/30 overflow-x-hidden min-h-screen">
+<!-- Auth Shell Background -->
+<div class="fixed inset-0 bg-mesh z-0"></div>
+<main class="relative z-10 flex flex-col items-center justify-center min-h-screen px-margin-mobile py-stack-lg max-w-[480px] mx-auto">
+<!-- Header / Logo -->
+<header class="flex flex-col items-center text-center mb-stack-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
+<div class="w-16 h-16 bg-surface-navy border border-white/10 rounded-xl flex items-center justify-center mb-stack-md shadow-xl">
+<span class="material-symbols-outlined text-electric-blue text-4xl" data-icon="fitness_center">fitness_center</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-white tracking-tight">
+                EduFisic <span class="text-electric-blue">Pro</span>
+</h1>
+</header>
+<!-- Form Card -->
+<section class="w-full bg-surface-navy border border-white/10 rounded-xl p-6 shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white mb-base">Crea tu Cuenta de Atleta</h2>
+<p class="text-on-surface-variant font-body-md">Únete al Olimpo Digital y comienza tu formación</p>
+</div>
+<form action="#" class="space-y-4" onsubmit="event.preventDefault();">
+<!-- Nombre Completo -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Nombre Completo</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-electric-blue transition-colors" data-icon="person">person</span>
+<input class="w-full bg-background-deep border border-white/10 rounded-lg py-3 pl-10 pr-4 text-white placeholder:text-on-surface-variant/50 focus:outline-none focus:border-electric-blue focus:ring-1 focus:ring-electric-blue transition-all" placeholder="Tu nombre y apellido" type="text"/>
+</div>
+</div>
+<!-- Correo Electrónico -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Correo Electrónico</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-electric-blue transition-colors" data-icon="mail">mail</span>
+<input class="w-full bg-background-deep border border-white/10 rounded-lg py-3 pl-10 pr-4 text-white placeholder:text-on-surface-variant/50 focus:outline-none focus:border-electric-blue focus:ring-1 focus:ring-electric-blue transition-all" placeholder="email@ejemplo.com" type="email"/>
+</div>
+</div>
+<!-- Contraseña -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Contraseña</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-electric-blue transition-colors" data-icon="lock">lock</span>
+<input class="w-full bg-background-deep border border-white/10 rounded-lg py-3 pl-10 pr-12 text-white placeholder:text-on-surface-variant/50 focus:outline-none focus:border-electric-blue focus:ring-1 focus:ring-electric-blue transition-all" id="passwordField" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-white transition-colors" onclick="togglePassword('passwordField')" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Confirmar Contraseña -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Confirmar Contraseña</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-electric-blue transition-colors" data-icon="lock">lock</span>
+<input class="w-full bg-background-deep border border-white/10 rounded-lg py-3 pl-10 pr-4 text-white placeholder:text-on-surface-variant/50 focus:outline-none focus:border-electric-blue focus:ring-1 focus:ring-electric-blue transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-electric-blue hover:bg-primary-container text-white font-headline-md py-4 rounded-lg flex items-center justify-center gap-2 glow-button transition-all active:scale-95 mt-stack-md" type="submit">
+                    Registrarse
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative my-stack-lg text-center">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-white/10"></div>
+</div>
+<span class="relative px-4 bg-surface-navy text-on-surface-variant font-label-sm uppercase tracking-widest text-[10px]">O REGÍSTRATE CON</span>
+</div>
+<!-- Social Auth -->
+<div class="grid grid-cols-2 gap-stack-md">
+<button class="flex items-center justify-center gap-2 bg-background-deep border border-white/10 rounded-lg py-3 hover:bg-surface-container-high transition-all active:scale-95 group">
+<img alt="Google" class="w-5 h-5 opacity-80 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7SSfzEjicp33NWv352Xt92VHdTOVVkOHWCBQvOGEw9jNPT64lb6_HMBaD84-Bobdz1QPCmIwgnj7ZfurQbMceyBJIZOrv5oxUGMkZrgQnsXcb2enAu1SNtaau44tGUxbxMVI6a6foUGd_3X2FOrCK6i1F4bTr-GcduKXcsNqg4ThJqfblyRtpz_x1vWurvWbygqLX3mZRYKlqykvO35DXuA2Q4j6YkFxRim1MiFxtnl0vX3_H-9AcpGTz7IgTWPYtfcO6sybBe3ZZ"/>
+<span class="font-label-md text-white">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 bg-background-deep border border-white/10 rounded-lg py-3 hover:bg-surface-container-high transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-white" data-icon="apple" style="font-variation-settings: 'FILL' 1;">ios</span>
+<span class="font-label-md text-white">Apple</span>
+</button>
+</div>
+</section>
+<!-- Bottom Link -->
+<div class="mt-stack-lg text-center animate-in fade-in slide-in-from-bottom-2 duration-700 delay-200">
+<p class="text-on-surface-variant font-body-md">
+                ¿Ya tienes cuenta? 
+                <a class="text-electric-blue font-bold hover:underline ml-1" href="login.html">Iniciar Sesión</a>
+</p>
+</div>
+<!-- Footer -->
+<footer class="mt-auto pt-12 w-full flex flex-col items-center gap-4 animate-in fade-in duration-1000 delay-300">
+<div class="flex gap-stack-md text-on-surface-variant font-label-sm uppercase tracking-wider text-[11px]">
+<a class="hover:text-electric-blue transition-colors" href="legal.html">Privacidad</a>
+<span class="text-white/10">•</span>
+<a class="hover:text-electric-blue transition-colors" href="legal.html">Términos</a>
+<span class="text-white/10">•</span>
+<a class="hover:text-electric-blue transition-colors" href="legal.html">Contacto</a>
+</div>
+<p class="text-[10px] text-on-surface-variant/40 font-label-sm">© 2024 EDUFISIC PRO. ELITE PERFORMANCE PLATFORM.</p>
+</footer>
+</main>
+<!-- Visual Atmosphere Decor -->
+<div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-electric-blue/40 to-transparent"></div>
+<div class="fixed -bottom-24 -left-24 w-96 h-96 bg-electric-blue/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="fixed -top-24 -right-24 w-96 h-96 bg-action-indigo/10 rounded-full blur-[100px] pointer-events-none"></div>
+<script>
+        function togglePassword(id) {
+            const field = document.getElementById(id);
+            const btn = event.currentTarget.querySelector('span');
+            if (field.type === 'password') {
+                field.type = 'text';
+                btn.textContent = 'visibility_off';
+            } else {
+                field.type = 'password';
+                btn.textContent = 'visibility';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach((input, index) => {
+                input.style.opacity = '0';
+                input.style.transform = 'translateX(-10px)';
+                setTimeout(() => {
+                    input.style.transition = 'all 0.4s ease-out';
+                    input.style.opacity = '1';
+                    input.style.transform = 'translateX(0)';
+                }, 400 + (index * 100));
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduFisic Pro - Manuales y Descargas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-surface-variant": "#c3c6d7",
+                        "electric-blue": "#2563EB",
+                        "action-indigo": "#312E81",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#656d84",
+                        "on-secondary-fixed": "#100563",
+                        "outline": "#8d90a0",
+                        "on-tertiary": "#283044",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container": "#1d2022",
+                        "primary-container": "#2563eb",
+                        "accent-danger": "#EF4444",
+                        "on-secondary-fixed-variant": "#3e3c8f",
+                        "on-error": "#690005",
+                        "surface": "#101415",
+                        "inverse-primary": "#0053db",
+                        "secondary-container": "#3e3c8f",
+                        "error": "#ffb4ab",
+                        "surface-navy": "#1E1B4B",
+                        "inverse-on-surface": "#2d3133",
+                        "surface-container-low": "#191c1e",
+                        "tertiary": "#bec6e0",
+                        "inverse-surface": "#e0e3e5",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-surface": "#e0e3e5",
+                        "accent-success": "#10B981",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "surface-tint": "#b4c5ff",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#b4c5ff",
+                        "background-deep": "#0F172A",
+                        "on-background": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "on-secondary": "#272377",
+                        "background": "#101415",
+                        "on-primary": "#002a78",
+                        "surface-bright": "#363a3b",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-high": "#272a2c",
+                        "outline-variant": "#434655",
+                        "on-primary-fixed": "#00174b",
+                        "surface-container-highest": "#323537",
+                        "surface-dim": "#101415",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "on-primary-container": "#eeefff",
+                        "surface-variant": "#323537",
+                        "secondary": "#c3c0ff",
+                        "on-secondary-container": "#afadff",
+                        "surface-container-lowest": "#0b0f10",
+                        "secondary-fixed": "#e2dfff",
+                        "on-tertiary-container": "#eef0ff",
+                        "on-primary-fixed-variant": "#003ea8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "margin-desktop": "32px",
+                        "stack-sm": "8px",
+                        "base": "4px",
+                        "stack-lg": "32px",
+                        "gutter": "16px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["JetBrains Mono"],
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"],
+                        "label-sm": ["JetBrains Mono"],
+                        "display-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0F172A;
+            color: #e0e3e5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-nav {
+            background: rgba(29, 32, 34, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .performance-card {
+            background: #1E1B4B;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .performance-card:hover {
+            box-shadow: 0px 0px 20px rgba(37, 99, 235, 0.2);
+            border-color: #2563EB;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/10 flex justify-between items-center px-margin-mobile h-16">
+<div class="flex items-center gap-4">
+<button class="text-primary hover:bg-surface-container-high transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">
+<img alt="EduFisic Pro Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ6V0ED_zFz5DbcV6UrirC6oSEiNAv2aDYghIOj3-KzNimaZy9791AMdxKCCu9IzJ4Wu0Ou49y3yxO_MFdR8xUXBFXkTZq8KXHQZlfUt8w1sIQ3gl7RQdWtGNIgkO_jLcoloL0Vj_f0wgWAvii9X-WacIHMvZ5KfvC31I01yAFngE0gZplbvDnxqf5B66xC1mX0NvplBYrgzL1w4p6k1tn9lde5aIE3Rcqwg2qsuku31mG8qmPVCuk_v5zwlcejF2QY6a8avuOMMaK"/>
+</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-primary hover:bg-surface-container-high transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-margin-mobile max-w-7xl mx-auto relative">
+<!-- Background Watermark Logo -->
+<div class="fixed inset-0 pointer-events-none flex items-center justify-center opacity-[0.05] z-0">
+<img alt="" class="w-full max-w-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ6V0ED_zFz5DbcV6UrirC6oSEiNAv2aDYghIOj3-KzNimaZy9791AMdxKCCu9IzJ4Wu0Ou49y3yxO_MFdR8xUXBFXkTZq8KXHQZlfUt8w1sIQ3gl7RQdWtGNIgkO_jLcoloL0Vj_f0wgWAvii9X-WacIHMvZ5KfvC31I01yAFngE0gZplbvDnxqf5B66xC1mX0NvplBYrgzL1w4p6k1tn9lde5aIE3Rcqwg2qsuku31mG8qmPVCuk_v5zwlcejF2QY6a8avuOMMaK"/>
+</div>
+<!-- Hero Section & Search -->
+<section class="mb-stack-lg relative z-10">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Manuales y Descargas</h2>
+<p class="text-on-surface-variant mb-stack-md">Accede a la biblioteca oficial de reglamentos, técnicas y guías de entrenamiento para deportes y juegos tradicionales.</p>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full bg-background-deep border border-outline-variant/30 rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all text-on-surface placeholder:text-on-surface-variant/50" placeholder="Buscar manual (ej. Béisbol 5, Perinola...)" type="text"/>
+</div>
+</section>
+<!-- Categories / Chips -->
+<div class="flex gap-2 overflow-x-auto pb-4 mb-stack-md scrollbar-hide relative z-10">
+<span class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap">Todos</span>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap border border-outline-variant/20 hover:bg-surface-container-high cursor-pointer transition-colors">Deportes</span>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap border border-outline-variant/20 hover:bg-surface-container-high cursor-pointer transition-colors">Juegos Tradicionales</span>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap border border-outline-variant/20 hover:bg-surface-container-high cursor-pointer transition-colors">Reglamentos AI</span>
+</div>
+<!-- Manuals Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter relative z-10">
+<!-- Manual Card 1: Béisbol 5 -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<img alt="Béisbol 5" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEg4SF8pqC-wpKOhudtqh-fj5N2ajSOk1X2-a1nT9BsKjdG8iRGQbKJ6hB6Uke46wRvRb4Iw4nWFNqSCpf-DRZ_Xs2ctWgNE8T9LvRUIWf0szPHEQbuN5Zl9p6098lS-mAn70pm00FZOczPHLNqFYY0Ff5C5HYq7yPbFvfQ6OXFDnLHXI1IzHJrmaCyH_VSJrOkyfhqPntevWop8ycUA7tecBKh94nD-DDNDZErPRhtoqUJEkHwNjFyb2FcPqu4I1vtpm4xKmRhBd-"/>
+<div class="absolute top-3 right-3 bg-background-deep/80 backdrop-blur-md px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase tracking-widest">Oficial</div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Béisbol 5</h3>
+<span class="font-label-sm text-label-sm text-outline">4.2 MB</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-stack-md flex-grow">Manual completo de la WBSC: Reglas oficiales, dimensiones del campo, técnicas de golpeo y estrategias de juego rápido.</p>
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-2 text-xs text-tertiary">
+<span class="material-symbols-outlined text-sm">history</span>
+<span>Actualizado: Oct 2023</span>
+</div>
+<button class="w-full bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined">download</span>
+<span>Descargar Manual</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Manual Card 2: Bolas Criollas -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<img alt="Bolas Criollas" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2wcSIeYMlKhGhb8ZqtVjlLpDvSqaPDyIf4nFNvTZtRRacAa2uT51CNwUDeExAshTxYXKE49xr4DM79YvPckz7BQK3_Zyc0dQDH9FOzfxIMifdR6vd5AwTtRtMPZNvSlMtK6-OxtXGxRW40fqP_P5xzG54zszaTNLKwj8vkvScmHke5M_1kDJ0_G9Y3aG-2xQN0AK6S02t1Q8e7n3MubUpWcZm_TQnE11BkpCIibIJhOfoVLjME4B3fHl9fn8SDHtCtXA3khmnly60"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Bolas Criollas</h3>
+<span class="font-label-sm text-label-sm text-outline">2.8 MB</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-stack-md flex-grow">Guía técnica sobre el arrime y el boche. Incluye historia del deporte en Venezuela y reglamentación de torneos federados.</p>
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-2 text-xs text-tertiary">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+<span>Reglas y Historia</span>
+</div>
+<button class="w-full bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined">download</span>
+<span>Descargar Manual</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Manual Card 3: Kickingball -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<img alt="Kickingball" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDduFwwkMtKVbuFSIl9V0N4brF1RwrkRcTsobVC9lPf_C1sSg6zst2lrDUFeLOkYlNXgp8ROrmehcECu8wXgEawHKNHcK844I6tdJR5CpHZDvT-HLS7S277OcHykds7XB-a5FhfAdFuNiRNR5lT_GHN3RlFZ91coQeHzhg1G9ArAFJuLuuj1s559XEG4zVo4VElUDOUGpZFTtvIHurgbeTYeeUzvkeRu3-oiZIUii0L9QoRPPCw6aiuEjj4BVDhLLtZX4wqQnsh0mO"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Kickingball</h3>
+<span class="font-label-sm text-label-sm text-outline">5.1 MB</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-stack-md flex-grow">Reglamento nacional para categorías juveniles. Diagramas de jugadas defensivas, rotaciones y técnicas de pateo efectivo.</p>
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-2 text-xs text-tertiary">
+<span class="material-symbols-outlined text-sm">strategy</span>
+<span>Tácticas Avanzadas</span>
+</div>
+<button class="w-full bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined">download</span>
+<span>Descargar Manual</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Manual Card 4: Perinola -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<img alt="Perinola" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSt5XXWWG8H8SJY2uRpX-6UNjQyTg14Cr559GupP00T7xW3rPvwBOeGzG4JQG4b29WhsiOpVdRZJUh-OIQE6aCWxR1gNi2bg2wLDKnHcCpEbrM-I8QeorGWUKhQN_J0P5umnEx0QjcNi6-gNxr09lPlvnCDHboajU06xQYDgubtJzpRvD8LurTYCyUORxjIAiJ_CVYB-liLeknLo_pRD8QmkRm9Ph-J7BuKUqQMLzedKKprsmuSTsN_P0PDQSMkSesV35M3SYc4LRy"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Perinola</h3>
+<span class="font-label-sm text-label-sm text-outline">1.5 MB</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-stack-md flex-grow">Guía didáctica para docentes sobre juegos tradicionales. Técnicas de coordinación ojo-mano y preservación cultural.</p>
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-2 text-xs text-tertiary">
+<span class="material-symbols-outlined text-sm">school</span>
+<span>Guía Docente</span>
+</div>
+<button class="w-full bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined">download</span>
+<span>Descargar Manual</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Manual Card 5: Carrera de Sacos -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<img alt="Carrera de Sacos" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEqjI_2Kvm_gcjZ0boSieY9-s6VTGdQYjfYqOw5rUnkdSuIGX0uY3hWtao7XhF92PhBjhPwzX_YH3TSOlSW7Y486Z1N1g8ePFjYOhEo0TrinQCSuwemtC80DFGZNfnhCg434aclBxPaq8VleIomkPSYHzh9jBjiDcT5WQTjprE4htIPdhCwtqBmECvP42VhhQBoYzSIxJVPjXdhHhOBVf1zOeCoZmbErVyNfC6uKYWdh5HJbYCBXoD03lYnqxYDgfMY0adYEccBmGL"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Carrera de Sacos</h3>
+<span class="font-label-sm text-label-sm text-outline">1.2 MB</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-stack-md flex-grow">Organización de festivales recreativos: Seguridad, medidas reglamentarias y variaciones competitivas para escuelas.</p>
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-2 text-xs text-tertiary">
+<span class="material-symbols-outlined text-sm">festival</span>
+<span>Evento Recreativo</span>
+</div>
+<button class="w-full bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined">download</span>
+<span>Descargar Manual</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Manual Card 6: Atletismo de Pista -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<img alt="Atletismo" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBza9oqrD5DNteBwA1L_rPQbpTVsr2ieS4wWzrLifwym77SDHa-neAmBqPVsZPd1cCIMT9d8JDYPNWfV9zh_GDihzo3tPvsO3HixiD0kF8RETpr1bdfnRMif58n49v86X90mRY_ZF-UowkKQn9oSU8wNpufoX0TGvz2Xyf1piq0uB-TlPHNuyv66UxcAk6B49Wi61oVnQZ-dLFs3jX9BPrZhM1Kg70o0CK-m_-TXQCFayINbiBuX7VZXCqTv54dvBYnxFfyITkTMLM5"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Atletismo de Pista</h3>
+<span class="font-label-sm text-label-sm text-outline">6.5 MB</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-stack-md flex-grow">Manual integral de la IAAF: Pruebas de velocidad, vallas y relevos. Guía avanzada de técnica de salida y biomecánica.</p>
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-2 text-xs text-tertiary">
+<span class="material-symbols-outlined text-sm">fitness_center</span>
+<span>Alto Rendimiento</span>
+</div>
+<button class="w-full bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined">download</span>
+<span>Descargar Manual</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container/90 backdrop-blur-xl border-t border-outline-variant/10 shadow-lg flex justify-around items-center h-20 pb-safe px-2">
+<a class="flex flex-col items-center justify-center text-primary transition-all active:scale-90 duration-150" href="manuales.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-label-sm text-label-sm">Biblioteca</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="noticias.html">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-label-sm text-label-sm">Noticias</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="chat.html">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-label-sm text-label-sm">Chat AI</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-150" href="salud.html">
+<span class="material-symbols-outlined">medical_services</span>
+<span class="font-label-sm text-label-sm">Salud</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="social.html">
+<span class="material-symbols-outlined">diversity_3</span>
+<span class="font-label-sm text-label-sm">Social</span>
+</a>
+</nav>
+<script>
+        // Simple search filter simulation
+        const searchInput = document.querySelector('input[type="text"]');
+        const cards = document.querySelectorAll('article');
+
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                if (title.includes(term) || desc.includes(term)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Add interaction effects to cards
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

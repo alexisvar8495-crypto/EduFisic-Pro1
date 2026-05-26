@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduFisic Pro - Biblioteca de Juegos Tradicionales</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#bec6e0",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed": "#131b2e",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-background": "#e0e3e5",
+                    "surface-container-low": "#191c1e",
+                    "on-tertiary-container": "#eef0ff",
+                    "electric-blue": "#2563EB",
+                    "secondary-container": "#3e3c8f",
+                    "inverse-on-surface": "#2d3133",
+                    "surface-tint": "#b4c5ff",
+                    "on-secondary-container": "#afadff",
+                    "inverse-primary": "#0053db",
+                    "outline": "#8d90a0",
+                    "on-surface-variant": "#c3c6d7",
+                    "secondary-fixed": "#e2dfff",
+                    "background": "#101415",
+                    "on-surface": "#e0e3e5",
+                    "surface-navy": "#1E1B4B",
+                    "secondary": "#c3c0ff",
+                    "on-error": "#690005",
+                    "action-indigo": "#312E81",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "on-secondary-fixed-variant": "#3e3c8f",
+                    "on-primary-container": "#eeefff",
+                    "surface-container-highest": "#323537",
+                    "on-tertiary": "#283044",
+                    "on-primary": "#002a78",
+                    "accent-success": "#10B981",
+                    "error": "#ffb4ab",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "surface-container-high": "#272a2c",
+                    "background-deep": "#0F172A",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "surface-dim": "#101415",
+                    "surface-container": "#1d2022",
+                    "outline-variant": "#434655",
+                    "surface": "#101415",
+                    "surface-variant": "#323537",
+                    "on-secondary-fixed": "#100563",
+                    "on-secondary": "#272377",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#363a3b",
+                    "tertiary-container": "#656d84",
+                    "accent-danger": "#EF4444",
+                    "tertiary-fixed": "#dae2fd",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "surface-container-lowest": "#0b0f10",
+                    "inverse-surface": "#e0e3e5",
+                    "on-primary-fixed": "#00174b",
+                    "primary-container": "#2563eb",
+                    "primary": "#b4c5ff",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "32px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "base": "4px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Manrope"],
+                    "label-md": ["JetBrains Mono"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-md": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0F172A;
+            color: #e0e3e5;
+        }
+        .performance-card {
+            background-color: #1E1B4B;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .performance-card:hover {
+            box-shadow: 0px 0px 20px rgba(37, 99, 235, 0.2);
+            border-color: #2563EB;
+            transform: translateY(-2px);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-opacity-80 border-b border-white/10 bg-background dark:bg-background-deep flex justify-between items-center px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">menu</span>
+<a class="font-display-lg-mobile text-display-lg-mobile font-extrabold text-electric-blue" href="index.html">EduFisic Pro</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:opacity-80">search</span>
+<a class="w-10 h-10 rounded-full bg-surface-navy border border-white/20 overflow-hidden cursor-pointer active:scale-95 transition-transform" href="perfil.html">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQ04pHB3gA4WytE4lpfycuDID_TEQBxyqhLtWzbT9qTdhdOJFNTjTXn-fPwCx7EOrN78G7L_wgHLchHv7q0qS98UylEh1G4xI0DbuQcfRuw0aVawkKJDRBzs_8l7NmXKYtb_Ij3G4XK1L6V5NWCj-NpMGtCCddU4ViSB25IHWUnseSYgP6ACkt4HW5xXMUrQe6-LRaa7vA2KetYXyqK88wJfjNnEiTatNDpNMXpduFA1nbV3zIfDQIK-Qvbg4sZD4rCG2BAhz0DDf"/>
+</a>
+</div>
+</header>
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-stack-lg">
+<div class="flex flex-col gap-2">
+<div class="w-full aspect-[21/9] rounded-2xl overflow-hidden mb-6">
+<img alt="Colección de juegos tradicionales venezolanos" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhKonWmh81JTZwseuqWYiUF75RoXRJ7keBaoG9q_QTd4SzySyNaFFS0ITwbd0GFioq2xGfVnIlazLPFIVkyCy_9kFfpQqVd6ujZu3fODegw9tEXIUiSBlUinFi7St9P--4BpsI7aJqmEF9ZP40MLhIRFNJSJUm_avO1WHLHYtwFb0JhFSCn1npAmR_V8VgAFJEC5gLCqinyI0o4FxKUmlhimhnarxo4yB1D5aIsLo2NbieTAiIpWwlBzfo"/>
+</div>
+<span class="font-label-md text-label-md text-electric-blue tracking-widest uppercase">Patrimonio Cultural</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Biblioteca de Juegos Tradicionales</h2>
+<p class="text-on-surface-variant max-w-2xl">Explora la riqueza lúdica de Venezuela. Una colección académica y técnica sobre las tradiciones que definen nuestra agilidad y destreza física.</p>
+</div>
+</section>
+<!-- Bento Grid Library -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Card: Perinola -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col group">
+<div class="h-48 overflow-hidden">
+<img alt="Perinola venezolana artesanal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBToE7pqozabEZz2e1cE8oJ7WRsqOq1RiKe7gLixe16KyKKXOgkzgpmEo6mBYSsxe1bJT6A8X7W_lzhGD_X5G8uUfI1UjvTpo9qg61SLkNE2XHi9uOUY5G8HoNbEvjWak9NWioTvspT6CIhuMJM9SLCsVZ2eby6YC5FqEVCBYCxJ1Cf6mkzgCKA71U4zIpMZ7FfpGE-iVmwdFi5Yz29otK8AKttgpfMcUQlR4pWfIlOS_Jf4dNZQGAN6P1DVufcYtM72mrTqepM6M_7"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-primary">Perinola</h3>
+<span class="font-label-sm text-label-sm bg-action-indigo text-primary px-2 py-1 rounded">Coordinación</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-3">El juego consiste en ensartar la parte superior de madera (cabezal) en el palito de base mediante movimientos rítmicos de muñeca.</p>
+<div class="mt-auto pt-stack-sm flex items-center justify-between border-t border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 15 min
+                        </span>
+<a class="text-electric-blue flex items-center gap-1 font-bold text-sm hover:underline" href="perinola.html">
+                            Ver más <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card: Bolas Criollas -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col group">
+<div class="h-48 overflow-hidden">
+<img alt="Juego de Bolas Criollas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ0R1npE3pkjLWVJm6xV6z_D0HqTuBH_4lcCAVYJy3YFFEZLN2AW1zmQpeITfG5BRSGnbvreU5HjwCtRl2Dyv-MscvOIt5xU3gpDMmQR2WcgDeJqLjBeb6crz7jOCRE__QYT4lwyEyS15AKCjIKeIO4K1l-7IzgA1CIS4QoEX1weR3qirrw39XcwsdAiM1pkBDLL3fRwrrsgccJKrcQe9nO7fK5PKm1AvTJQUJT0Hsv-8EURahLWfU-X-JE9Hf05bKQBH9o_pxkiht"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-primary">Bolas Criollas</h3>
+<span class="font-label-sm text-label-sm bg-action-indigo text-primary px-2 py-1 rounded">Social / Equipo</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-3">Deporte de precisión derivado de las bochas. Se juega en canchas de tierra o arena con el objetivo de acercarse al mingo.</p>
+<div class="mt-auto pt-stack-sm flex items-center justify-between border-t border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">group</span> 4-8 jug.
+                        </span>
+<a class="text-electric-blue flex items-center gap-1 font-bold text-sm hover:underline" href="bolas-criollas.html">
+                            Ver más <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card: Metras -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col group">
+<div class="h-48 overflow-hidden">
+<img alt="Colección de Metras" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIDC9K1_QzbL2e4vDACkWNXoFawH6eTRkdTzMpdHaRuYVb-LRmhJqYAGHQYsVwXK3PQv6pi7lp-md2E3GDkR7EIAZ4nwqP2qdj43urpbDrMVL_OwKMk3WCC8yiDkNazsLeIPEOmB4gmgQQvsTkXlKLYvIeNMQ25eLpWX5biP-xj7xP_P5kDJNTDUDPRGOAFv2FoYCGigcHUusaKWUPvhN_qroWLsuyKYcCnx4Kn2eeGoIfPNj5OS1mLzbZ9srtugSBXQ326aCTbSI_"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-primary">Metras</h3>
+<span class="font-label-sm text-label-sm bg-action-indigo text-primary px-2 py-1 rounded">Puntería</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-3">Esferas de vidrio o cerámica que se lanzan con los dedos para golpear las del oponente fuera de un círculo trazado.</p>
+<div class="mt-auto pt-stack-sm flex items-center justify-between border-t border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">stars</span> Táctica
+                        </span>
+<a class="text-electric-blue flex items-center gap-1 font-bold text-sm hover:underline" href="metras.html">
+                            Ver más <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card: Trompo -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col group">
+<div class="h-48 overflow-hidden">
+<img alt="Trompo de madera" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMXBV1zEkY7Noy9LxNyrfwnkAq4ZjTD0_6pU3T_PuaHJIxwQLN-oWrXko-pTSYGo6dlwj9WE5VgGIUettA9YKmzWj1jZlM5CuScMFjg4EV3hcqJ6_YvKULAeVXXAI-TY0HRzLupldnIOq4oP_Lmi5LkXTZCtQa9ZeJt9FUxm5PToHtQQx0v0Ajo1j22voIEgObLetPEEBf7FCckKYHIdGD7TqkjkIBz5UuLNAQVTSyCH3DJLOsbVd7sOJ4tJsfPZSDTNFIIJGrLaj5"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-primary">Trompo</h3>
+<span class="font-label-sm text-label-sm bg-action-indigo text-primary px-2 py-1 rounded">Habilidad Física</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-3">Juguete de madera con forma de pera y punta de metal que se hace girar mediante una cuerda enrollada a su alrededor.</p>
+<div class="mt-auto pt-stack-sm flex items-center justify-between border-t border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">loop</span> Inercia
+                        </span>
+<a class="text-electric-blue flex items-center gap-1 font-bold text-sm hover:underline" href="trompo.html">
+                            Ver más <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card: Carrera de Sacos -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col group">
+<div class="h-48 overflow-hidden">
+<img alt="Carrera de sacos deportiva" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKAnwCctD5yk5JeJCbKcgEKP22_SlfF2ZqdI3swbJZ4eBJSSgTAnXFjDX_BMJrDNlIpfDAvS3R8xvS3iFtIPKPuHuAOg83JhOVGhENLC7NEYIsKRscpc_BhhVQXp7hAdH3u5EsPMmUvxsvm9-u2Zn4JcAEie8U61VE5NtuxEDeVxz0AVSFMauIa5dbS8922xm5meVJIXAngXWWpuUEdIljH7nFkdmN8HPJtMyE0XaRG_VWlH1rbMuTdwOU2DOsuXR-gWS0KmNPYLel"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-primary">Carrera de Sacos</h3>
+<span class="font-label-sm text-label-sm bg-action-indigo text-primary px-2 py-1 rounded">Resistencia Aeróbica</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-3">Competencia de velocidad donde los participantes introducen sus piernas en sacos de yute y avanzan mediante saltos.</p>
+<div class="mt-auto pt-stack-sm flex items-center justify-between border-t border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">directions_run</span> Potencia
+                        </span>
+<a class="text-electric-blue flex items-center gap-1 font-bold text-sm hover:underline" href="carrera-sacos.html">
+                            Ver más <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card: Papagayo -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col group">
+<div class="h-48 overflow-hidden">
+<img alt="Papagayo volando" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmF-s4mTBnPL_KcSexw59X_ulZlBODDb6vFr-i10S8h_Wp5rA1h34uNRD9nQmTzQbmIWdPt5O6Aw8ochHVKuU2EzFhPVAJqF-SEhpm3btsLnv-_pMYmHbgAwuMS-Woel6MnyAaeH29B-YA2pmM9IFcitY4JBxOamDQoyeUvBw5SnnF2vLWjHvA5Iogn7yIB7LGC33Vupi5AYZqJbZ52LW_lmLPX3quO7TuFE1YV1anW5ezQdrBtEqOvhAwrGk5zOQ9_5rQjPerFp8k"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-primary">Papagayo</h3>
+<span class="font-label-sm text-label-sm bg-action-indigo text-primary px-2 py-1 rounded">Concentración</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-3">Estructura liviana de madera y papel de seda que se eleva aprovechando las corrientes de aire mediante un cordel.</p>
+<div class="mt-auto pt-stack-sm flex items-center justify-between border-t border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">air</span> Control
+                        </span>
+<a class="text-electric-blue flex items-center gap-1 font-bold text-sm hover:underline" href="papagayo.html">
+                            Ver más <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card: Gurrufío -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col group">
+<div class="h-48 overflow-hidden">
+<img alt="Gurrufío artesanal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmG1tBg1EvRd9Qt4IhpEiN2WYv-KFaY8uklG5MPgk0w6V87xKu68auvvJytmsBQwHHtilo5N8ZO44ZzvzOyv_sEVuTOVJ9HVdYPs4vW6JW_Nsz6DCCLOw6ExAnJyQbqryjpO_dtgm0VOmscZ3I3Lq5bBPgQJjfd8e6vQkuT58b6JwF_dl8OvblrQoqfejPu_rsBS05D-hmkL5ST5PtzDziunDAfHdfJnCJbNOJ2u1axpKXw7c4-GA4H9dWEvel0HIcqTbRfWZW88oi"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-primary">Gurrufío</h3>
+<span class="font-label-sm text-label-sm bg-action-indigo text-primary px-2 py-1 rounded">Psicomotricidad</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-3">Disco circular con dos orificios centrales por los que pasa un cordel. Al estirar y encoger la cuerda, el disco gira a gran velocidad.</p>
+<div class="mt-auto pt-stack-sm flex items-center justify-between border-t border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">vibration</span> Frecuencia
+                        </span>
+<a class="text-electric-blue flex items-center gap-1 font-bold text-sm hover:underline" href="gurrufio.html">
+                            Ver más <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card: La Gallinita Ciega -->
+<article class="performance-card rounded-xl overflow-hidden flex flex-col group">
+<div class="h-48 overflow-hidden">
+<img alt="Gallinita Ciega dinámica grupal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALkAzT_0BunVGVpQfZFZwYZYOfMnIxuMOCGsghzgvgSVIt3JsrPnD1mPPCZuZHsDg3ioPvEEFR0ZSDkwZ8NMUz6H-aPqXs5mKx3uTH843LZxim_CqelSWOhSDJH1JYAD7YMAKKEDMDwN-P8azXs-ak-9MfgmNM-URt0hXjyGmjq0ExVviJSK8LlP-aJkyIL22yH6cQUyqB4Rok4zYmnWnEFa85iTNWIeWMvUNwB5vl5vwie5T3Lu9TYmkjdyV-aLUknPshQl253vOE"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-primary">Gallinita Ciega</h3>
+<span class="font-label-sm text-label-sm bg-action-indigo text-primary px-2 py-1 rounded">Capacidad Sensorial</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-3">Juego grupal donde un participante con los ojos vendados debe atrapar e identificar a los demás jugadores mediante el oído.</p>
+<div class="mt-auto pt-stack-sm flex items-center justify-between border-t border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility_off</span> Percepción
+                        </span>
+<a class="text-electric-blue flex items-center gap-1 font-bold text-sm hover:underline" href="gallinita-ciega.html">
+                            Ver más <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl backdrop-blur-xl bg-opacity-90 border-t border-white/5 bg-surface-navy shadow-lg flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150" href="noticias.html">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-label-sm text-label-sm">Noticias</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-transform duration-150" href="chat-ia.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="font-label-sm text-label-sm">Chat IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150" href="primeros-auxilios.html">
+<span class="material-symbols-outlined">medical_services</span>
+<span class="font-label-sm text-label-sm">Salud</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150" href="perfil.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Perfil</span>
+</a>
+</nav>
+<!-- Sidebar (Desktop Only) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-20 lg:w-64 bg-background-deep border-r border-white/10 flex-col z-40 transition-all duration-300">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-electric-blue rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">bolt</span>
+</div>
+<span class="hidden lg:block font-bold text-lg text-on-surface">EduFisic <span class="text-electric-blue">Pro</span></span>
+</div>
+<nav class="flex-grow py-8 space-y-2">
+<a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-white/5 hover:text-primary transition-all" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="hidden lg:block">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-white/5 hover:text-primary transition-all" href="rutinas.html">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="hidden lg:block">Rutinas</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-primary bg-action-indigo font-bold lg:mx-2 lg:rounded-lg" href="biblioteca.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="hidden lg:block">Biblioteca</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-white/5 hover:text-primary transition-all" href="analiticas.html">
+<span class="material-symbols-outlined">insights</span>
+<span class="hidden lg:block">Analíticas</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-white/5 hover:text-primary transition-all" href="ajustes.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="hidden lg:block">Ajustes</span>
+</a>
+</nav>
+<div class="p-4 border-t border-white/10">
+<div class="bg-surface-navy rounded-xl p-4 hidden lg:block">
+<p class="text-xs text-on-surface-variant mb-2">Soporte PRO</p>
+<p class="text-sm font-bold mb-3">¿Necesitas ayuda técnica?</p>
+<button class="w-full py-2 bg-electric-blue text-white rounded-lg text-xs font-bold hover:bg-opacity-90 transition-opacity">Centro de Ayuda</button>
+</div>
+</div>
+</aside>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.performance-card').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'translateY(-2px) scale(1)';
+            });
+        });
+
+        // Search highlight simulation
+        const searchBtn = document.querySelector('.material-symbols-outlined:nth-child(2)');
+        if(searchBtn) {
+            searchBtn.onclick = () => {
+                console.log('Search triggered');
+            };
+        }
+    </script>
+</body></html>

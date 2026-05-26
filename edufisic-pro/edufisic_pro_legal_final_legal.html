@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#3e3c8f",
+                    "on-primary": "#002a78",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "surface-container-lowest": "#0b0f10",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "surface-bright": "#363a3b",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "surface-navy": "#1E1B4B",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#eef0ff",
+                    "on-background": "#e0e3e5",
+                    "surface-container-low": "#191c1e",
+                    "error-container": "#93000a",
+                    "accent-danger": "#EF4444",
+                    "error": "#ffb4ab",
+                    "primary": "#b4c5ff",
+                    "on-secondary": "#272377",
+                    "primary-container": "#2563eb",
+                    "accent-success": "#10B981",
+                    "background": "#101415",
+                    "action-indigo": "#312E81",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "on-secondary-fixed-variant": "#3e3c8f",
+                    "surface-tint": "#b4c5ff",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed": "#100563",
+                    "outline": "#8d90a0",
+                    "inverse-on-surface": "#2d3133",
+                    "electric-blue": "#2563EB",
+                    "secondary-fixed": "#e2dfff",
+                    "surface-container": "#1d2022",
+                    "surface": "#101415",
+                    "surface-container-highest": "#323537",
+                    "on-surface": "#e0e3e5",
+                    "tertiary-container": "#656d84",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "tertiary-fixed": "#dae2fd",
+                    "on-secondary-container": "#afadff",
+                    "on-surface-variant": "#c3c6d7",
+                    "secondary": "#c3c0ff",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#e0e3e5",
+                    "tertiary": "#bec6e0",
+                    "outline-variant": "#434655",
+                    "background-deep": "#0F172A",
+                    "on-primary-fixed": "#00174b",
+                    "inverse-primary": "#0053db",
+                    "on-tertiary-fixed": "#131b2e",
+                    "surface-container-high": "#272a2c",
+                    "on-tertiary": "#283044",
+                    "surface-variant": "#323537",
+                    "surface-dim": "#101415",
+                    "on-primary-container": "#eeefff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "32px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Manrope"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "label-sm": ["JetBrains Mono"],
+                    "body-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .legal-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .legal-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .legal-scroll::-webkit-scrollbar-thumb {
+            background: #2563EB;
+            border-radius: 10px;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-deep text-on-surface selection:bg-electric-blue selection:text-white min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-opacity-80 border-b border-white/10 bg-background dark:bg-background-deep flex justify-between items-center px-margin-mobile h-16">
+<div class="flex items-center gap-4">
+<a aria-label="Volver" class="hover:opacity-80 transition-opacity active:scale-95 duration-200 text-primary flex items-center justify-center" href="index.html">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Información Legal</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-electric-blue uppercase tracking-widest hidden md:block">EduFisic Pro v2.4</span>
+<div class="w-8 h-8 rounded-full bg-surface-navy border border-white/10 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgLkxskGLCfuM2Ilv7cihLZZ-WUqupxIPhVLYvyJj2X-qaSUpvvTJ2sBNZKIfcWm7v7tnlDmqKhAwT6Dy1S40hh3BeeCbMKVkWAdpzIiZmhkR6HF82vcQyV9tV396Y3ZcyNLz0q27HqocHuILq0Gawxwbw9RCWkiqazDrmXXYehsgH17upQuEWF2Z7neT11VT5OxmnncAlTkX60nze4mehCbQxubb0yaeN67U8UHoUp-HdJfXILpTWE8DOa9NH9mg0It-1oRUYVgV9"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-stack-lg px-margin-mobile max-w-4xl mx-auto">
+<!-- Header Section -->
+<section class="mb-stack-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
+<div class="inline-block px-3 py-1 rounded-full bg-action-indigo/30 border border-electric-blue/30 mb-stack-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase">Centro de Transparencia</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-base">Documentación y Privacidad</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Última actualización: 24 de Octubre de 2023. Lea detenidamente estos documentos que rigen el uso de la plataforma EduFisic Pro.
+            </p>
+</section>
+<!-- Bento Grid Legal Sections -->
+<div class="grid grid-cols-1 gap-stack-md">
+<!-- Términos y Condiciones -->
+<article class="bg-surface-navy rounded-xl border border-white/10 p-stack-md overflow-hidden relative group transition-all duration-300 hover:border-electric-blue/50">
+<div class="absolute top-0 left-0 w-1 h-full bg-electric-blue opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-start justify-between mb-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-3xl">gavel</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Términos y Condiciones</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sección 01</span>
+</div>
+<div class="space-y-stack-md font-body-md text-body-md text-on-surface-variant max-h-64 overflow-y-auto legal-scroll pr-4">
+<p>Al acceder y utilizar EduFisic Pro, el usuario acepta de manera expresa los presentes términos. Nuestra plataforma está diseñada para la excelencia atlética y el rigor académico, proporcionando herramientas avanzadas de gestión deportiva y educativa.</p>
+<p>El uso del software está sujeto a una licencia personal, intransferible y no exclusiva. Queda estrictamente prohibido cualquier uso que comprometa la integridad de nuestros servidores o la experiencia de otros usuarios de la comunidad.</p>
+<p>EduFisic Pro se reserva el derecho de modificar, suspender o discontinuar cualquier aspecto del servicio en cualquier momento sin previo aviso, manteniendo siempre el compromiso de resguardar los datos históricos del usuario.</p>
+</div>
+</article>
+<!-- Política de Privacidad -->
+<article class="bg-surface-navy rounded-xl border border-white/10 p-stack-md overflow-hidden relative group transition-all duration-300 hover:border-electric-blue/50">
+<div class="absolute top-0 left-0 w-1 h-full bg-electric-blue opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-start justify-between mb-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-3xl">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Política de Privacidad</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sección 02</span>
+</div>
+<div class="space-y-stack-md font-body-md text-body-md text-on-surface-variant max-h-64 overflow-y-auto legal-scroll pr-4">
+<p>La privacidad de nuestros atletas y estudiantes es nuestra prioridad absoluta. Implementamos protocolos de encriptación de grado bancario para proteger su información biométrica, planes de entrenamiento y datos personales.</p>
+<p>Recopilamos datos mínimos necesarios para la funcionalidad de la app, incluyendo rendimiento físico, progreso en rutinas y preferencias de nutrición. Nunca venderemos sus datos a terceros ni los utilizaremos con fines publicitarios ajenos a la mejora de su rendimiento.</p>
+<p>Usted mantiene el control total sobre su información, pudiendo solicitar la exportación o eliminación completa de su perfil en cualquier momento desde los ajustes de seguridad.</p>
+</div>
+</article>
+<!-- Aviso de Copyright & Propiedad Intelectual -->
+<article class="bg-surface-navy rounded-xl border border-white/10 p-stack-md overflow-hidden relative group transition-all duration-300 hover:border-electric-blue/50">
+<div class="absolute top-0 left-0 w-1 h-full bg-electric-blue opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-start justify-between mb-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-3xl">copyright</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Aviso de Copyright</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sección 03</span>
+</div>
+<div class="bg-background-deep/50 p-stack-md rounded-lg border border-white/5 mb-stack-md">
+<p class="font-label-md text-label-md text-primary mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">warning</span> PROTECCIÓN DE PROPIEDAD INTELECTUAL
+                    </p>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+                        "Todo el contenido visual, lógica de programación, algoritmos de entrenamiento, diseño de interfaz y elementos de marca contenidos en EduFisic Pro son propiedad exclusiva de EduFisic Corp. Se prohíbe terminantemente la clonación, reproducción total o parcial, ingeniería inversa o cualquier método de extracción de datos no autorizado."
+                    </p>
+</div>
+<div class="space-y-stack-md font-body-md text-body-md text-on-surface-variant">
+<p>Cualquier intento de replicar la experiencia de usuario o la infraestructura tecnológica de la aplicación será perseguido mediante acciones legales internacionales bajo los tratados de propiedad intelectual vigentes.</p>
+</div>
+</article>
+</div>
+<!-- Support CTA -->
+<section class="mt-stack-lg flex flex-col items-center gap-stack-md">
+<div class="text-center">
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">¿Tienes preguntas legales adicionales?</p>
+<button class="bg-primary-container text-on-primary-container font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-all active:scale-95 flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+                    Contactar Soporte Legal
+                </button>
+</div>
+<div class="w-full h-px bg-white/10 mt-stack-md"></div>
+<div class="flex flex-col md:flex-row justify-between items-center w-full gap-stack-sm opacity-60">
+<p class="font-label-sm text-label-sm">© 2023 EduFisic Pro. Todos los derechos reservados.</p>
+<div class="flex gap-stack-md">
+<a class="font-label-sm text-label-sm hover:text-electric-blue transition-colors" href="#">Políticas Globales</a>
+<a class="font-label-sm text-label-sm hover:text-electric-blue transition-colors" href="#">Comité de Ética</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Background Decorative Elements -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-electric-blue/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary-container/5 blur-[100px] rounded-full"></div>
+</div>
+<!-- Navigation Shell (BottomNavBar for Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl backdrop-blur-xl bg-opacity-90 border-t border-white/5 bg-surface-navy shadow-lg flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Panel</span>
+</a>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-sm text-label-sm">Rutinas</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm">Biblioteca</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Perfil</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions for scrolling and interaction
+        document.querySelectorAll('article').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = "0px 0px 20px rgba(37, 99, 235, 0.1)";
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = "none";
+            });
+        });
+    </script>
+</body></html>

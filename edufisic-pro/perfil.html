@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduFisic Pro - Perfil de Atleta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#101415",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#0053db",
+                    "tertiary": "#bec6e0",
+                    "action-indigo": "#312E81",
+                    "surface-container-lowest": "#0b0f10",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "on-secondary-container": "#afadff",
+                    "surface-dim": "#101415",
+                    "outline-variant": "#434655",
+                    "surface-navy": "#1E1B4B",
+                    "tertiary-fixed": "#dae2fd",
+                    "background-deep": "#0F172A",
+                    "on-primary-fixed": "#00174b",
+                    "secondary-fixed": "#e2dfff",
+                    "surface-tint": "#b4c5ff",
+                    "surface-bright": "#363a3b",
+                    "inverse-on-surface": "#2d3133",
+                    "on-surface-variant": "#c3c6d7",
+                    "inverse-surface": "#e0e3e5",
+                    "outline": "#8d90a0",
+                    "on-tertiary-container": "#eef0ff",
+                    "secondary-container": "#3e3c8f",
+                    "error": "#ffb4ab",
+                    "secondary": "#c3c0ff",
+                    "surface": "#101415",
+                    "on-surface": "#e0e3e5",
+                    "surface-variant": "#323537",
+                    "on-primary": "#002a78",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "electric-blue": "#2563EB",
+                    "primary": "#b4c5ff",
+                    "accent-success": "#10B981",
+                    "surface-container-high": "#272a2c",
+                    "surface-container-highest": "#323537",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary": "#272377",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "accent-danger": "#EF4444",
+                    "error-container": "#93000a",
+                    "primary-container": "#2563eb",
+                    "on-secondary-fixed": "#100563",
+                    "tertiary-container": "#656d84",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "surface-container": "#1d2022",
+                    "on-primary-container": "#eeefff",
+                    "surface-container-low": "#191c1e",
+                    "on-tertiary-fixed": "#131b2e",
+                    "on-background": "#e0e3e5",
+                    "on-tertiary": "#283044",
+                    "on-secondary-fixed-variant": "#3e3c8f",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#003ea8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "base": "4px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "32px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "label-sm": ["JetBrains Mono"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "label-md": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden pb-24">
+<!-- TopAppBar -->
+<header class="bg-background/80 backdrop-blur-md border-b border-white/10 w-full top-0 sticky flex justify-between items-center px-margin-mobile h-16 w-full z-50">
+<div class="flex items-center gap-3">
+<a class="w-10 h-10 rounded-full overflow-hidden border border-white/10" href="index.html">
+<img alt="EduFisic Pro Logo" class="w-full h-full object-cover shadow-lg shadow-black/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ6V0ED_zFz5DbcV6UrirC6oSEiNAv2aDYghIOj3-KzNimaZy9791AMdxKCCu9IzJ4Wu0Ou49y3yxO_MFdR8xUXBFXkTZq8KXHQZlfUt8w1sIQ3gl7RQdWtGNIgkO_jLcoloL0Vj_f0wgWAvii9X-WacIHMvZ5KfvC31I01yAFngE0gZplbvDnxqf5B66xC1mX0NvplBYrgzL1w4p6k1tn9lde5aIE3Rcqwg2qsuku31mG8qmPVCuk_v5zwlcejF2QY6a8avuOMMaK"/>
+</a>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-white uppercase tracking-tighter">EduFisic Pro</span>
+</div>
+<button class="hover:opacity-80 transition-opacity text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg space-y-stack-lg">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center text-center space-y-stack-sm md:flex-row md:text-left md:items-end md:gap-8">
+<div class="relative group">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-electric-blue shadow-[0px_0px_20px_rgba(37,99,235,0.3)] overflow-hidden">
+<img alt="Alex Rivers" class="w-full h-full object-cover" data-alt="A high-detail, front-facing portrait of an elite athlete in sportswear. The setting is a futuristic training facility with subtle indigo and electric blue lighting. The mood is confident and disciplined, reflecting professional excellence. The style is modern corporate performance with high contrast between deep backgrounds and bright highlight areas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALRpyfEJAKmrX-3scZiMvM3wQ2BeLevBGS7Kx3GpxkKTTOKxPeY8q3sviGy_az9jc335hIHX1un9qpzsGONNACf6Ltt_0j4sCNaY3UAXkupkTCxPcl5bpHnyoG31j_twCzloc7GZQkqOqWfO4oEO_8GiOi9GKae9xoDtQNDmK_zQyxH3VrTFDDdCy55NKFEOjO03Qrw0eY5ezl8c93sA8P1UthUwxIMWNTIiLKZdeGvEhW3vqE5HPTqs511RusR0WdoqmL18R-R5Rm"/>
+</div>
+<div class="absolute bottom-1 right-1 rounded-full p-2 border-2 border-background bg-white"><img alt="Verified" class="w-6 h-6 object-contain drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ6V0ED_zFz5DbcV6UrirC6oSEiNAv2aDYghIOj3-KzNimaZy9791AMdxKCCu9IzJ4Wu0Ou49y3yxO_MFdR8xUXBFXkTZq8KXHQZlfUt8w1sIQ3gl7RQdWtGNIgkO_jLcoloL0Vj_f0wgWAvii9X-WacIHMvZ5KfvC31I01yAFngE0gZplbvDnxqf5B66xC1mX0NvplBYrgzL1w4p6k1tn9lde5aIE3Rcqwg2qsuku31mG8qmPVCuk_v5zwlcejF2QY6a8avuOMMaK"/></div>
+</div>
+<div class="space-y-1">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Alex Rivers</h1>
+<p class="font-label-md text-label-md text-electric-blue flex items-center justify-center md:justify-start gap-1">
+<span class="material-symbols-outlined text-sm">stars</span>
+                    Nivel 12 - Atleta Elite
+                </p>
+<div class="pt-4 flex flex-wrap justify-center md:justify-start gap-3">
+<button class="bg-primary-container text-white font-bold px-6 py-2 rounded-xl active:scale-95 duration-150 transition-all">Editar Perfil</button>
+<a class="border border-secondary-container bg-secondary-container/15 text-on-surface font-bold px-6 py-2 rounded-xl active:scale-95 duration-150 transition-all inline-block" href="settings.html">Ajustes</a>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Stats & Activity -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Mi Progreso (Bento Item) -->
+<section class="md:col-span-8 bg-surface-navy border border-white/10 rounded-xl p-6 space-y-6">
+<div class="flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-primary">Mi Progreso</h2>
+<span class="material-symbols-outlined text-outline">insights</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-background-deep p-4 rounded-xl border border-white/5 space-y-2">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Rutinas</span>
+<div class="flex items-baseline gap-1">
+<span class="text-display-lg-mobile font-display-lg-mobile text-electric-blue">48</span>
+<span class="text-label-md font-label-md text-on-surface-variant">completadas</span>
+</div>
+<div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-electric-blue h-full w-3/4"></div>
+</div>
+</div>
+<div class="bg-background-deep p-4 rounded-xl border border-white/5 space-y-2">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Logros</span>
+<div class="flex items-baseline gap-1">
+<span class="text-display-lg-mobile font-display-lg-mobile text-accent-success">15</span>
+<span class="text-label-md font-label-md text-on-surface-variant">obtenidos</span>
+</div>
+<div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-accent-success h-full w-1/2"></div>
+</div>
+</div>
+<div class="bg-background-deep p-4 rounded-xl border border-white/5 space-y-2">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Entrenamiento</span>
+<div class="flex items-baseline gap-1">
+<span class="text-display-lg-mobile font-display-lg-mobile text-primary">124</span>
+<span class="text-label-md font-label-md text-on-surface-variant">horas</span>
+</div>
+<div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Activity (Bento Item) -->
+<section class="md:col-span-4 bg-surface-navy border border-white/10 rounded-xl p-6 space-y-4">
+<div class="flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-primary">Actividad</h2>
+<span class="material-symbols-outlined text-outline">history</span>
+</div>
+<ul class="space-y-4"><li class="flex items-start gap-3 group cursor-pointer"><div class="bg-electric-blue/10 p-2 rounded-lg text-electric-blue"><span class="material-symbols-outlined text-[20px]">download</span></div><div class="flex-1 border-b border-white/5 pb-2"><p class="font-body-md text-on-surface group-hover:text-electric-blue transition-colors">Infografía de Bolas Criollas descargada</p><p class="text-label-sm font-label-sm text-outline">Hace 1 hora</p></div></li><li class="flex items-start gap-3 group cursor-pointer"><div class="bg-accent-success/10 p-2 rounded-lg text-accent-success"><span class="material-symbols-outlined text-[20px]">task_alt</span></div><div class="flex-1 border-b border-white/5 pb-2"><p class="font-body-md text-on-surface group-hover:text-electric-blue transition-colors">Evaluación técnica completada</p><p class="text-label-sm font-label-sm text-outline">Hace 3 horas</p></div></li><li class="flex items-start gap-3 group cursor-pointer"><div class="bg-electric-blue/10 p-2 rounded-lg text-electric-blue"><span class="material-symbols-outlined text-[20px]">download</span></div><div class="flex-1 border-b border-white/5 pb-2"><p class="font-body-md text-on-surface group-hover:text-electric-blue transition-colors">Manual de Béisbol 5 descargado</p><p class="text-label-sm font-label-sm text-outline">Hace 2 horas</p></div></li></ul>
+</section>
+</div>
+<!-- Mis Logros (Horizontal Scroll) -->
+<section class="space-y-4">
+<div class="flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-primary">Mis Logros</h2>
+<button class="text-label-md font-label-md text-electric-blue flex items-center gap-1 hover:opacity-80">
+                    Ver todos <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-4 overflow-x-auto custom-scrollbar pb-4 snap-x">
+<!-- Achievement Card 1 -->
+<div class="flex-shrink-0 w-48 bg-surface-navy border border-white/10 rounded-xl p-6 flex flex-col items-center text-center space-y-3 snap-start hover:shadow-[0px_0px_20px_rgba(37,99,235,0.2)] transition-all">
+<div class="w-20 h-20 bg-gradient-to-br from-electric-blue to-primary-container rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-body-md font-bold text-on-surface">Medalla Maestro del Trompo</h3>
+<p class="text-label-sm font-label-sm text-outline">Habilidad Tradicional</p>
+</div>
+</div>
+<!-- Achievement Card 2 -->
+<div class="flex-shrink-0 w-48 bg-surface-navy border border-white/10 rounded-xl p-6 flex flex-col items-center text-center space-y-3 snap-start hover:shadow-[0px_0px_20px_rgba(37,99,235,0.2)] transition-all">
+<div class="w-20 h-20 bg-gradient-to-br from-accent-success to-emerald-800 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<div>
+<h3 class="font-body-md font-bold text-on-surface">Primeros Auxilios</h3>
+<p class="text-label-sm font-label-sm text-outline">Nivel 1</p>
+</div>
+</div>
+<!-- Achievement Card 3 -->
+<div class="flex-shrink-0 w-48 bg-surface-navy border border-white/10 rounded-xl p-6 flex flex-col items-center text-center space-y-3 snap-start hover:shadow-[0px_0px_20px_rgba(37,99,235,0.2)] transition-all">
+<div class="w-20 h-20 bg-gradient-to-br from-secondary to-secondary-container rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<div>
+<h3 class="font-body-md font-bold text-on-surface">Rigor Académico</h3>
+<p class="text-label-sm font-label-sm text-outline">10 Manuales leídos</p>
+</div>
+</div>
+<!-- Achievement Card 4 -->
+<div class="flex-shrink-0 w-48 bg-surface-navy border border-white/10 rounded-xl p-6 flex flex-col items-center text-center space-y-3 snap-start hover:shadow-[0px_0px_20px_rgba(37,99,235,0.2)] transition-all">
+<div class="w-20 h-20 bg-gradient-to-br from-amber-400 to-amber-700 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div>
+<h3 class="font-body-md font-bold text-on-surface">Racha Imbatible</h3>
+<p class="text-label-sm font-label-sm text-outline">15 Días seguidos</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions / Danger Zone -->
+<section class="space-y-3 pt-4">
+<a class="w-full flex items-center justify-between p-4 bg-surface-navy border border-white/10 rounded-xl hover:bg-surface-variant transition-colors group" href="settings.html">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">privacy_tip</span>
+<span class="font-body-md text-on-surface">Ajustes de Privacidad</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<button class="w-full flex items-center justify-between p-4 bg-error-container/10 border border-error-container/20 rounded-xl hover:bg-error-container/20 transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-danger">logout</span>
+<span class="font-body-md text-accent-danger">Cerrar Sesión</span>
+</div>
+<span class="material-symbols-outlined text-accent-danger group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe bg-surface-container/90 backdrop-blur-xl border-t border-white/5 z-50 rounded-t-xl shadow-[0px_-4px_20px_rgba(37,99,235,0.1)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-200" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-label-sm text-label-sm">Noticias</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-label-sm text-label-sm">Chat IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">monitor_heart</span>
+<span class="font-label-sm text-label-sm">Salud</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold bg-primary-container/20 rounded-xl px-3 py-1 active:scale-90 duration-200" href="perfil.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-label-sm text-label-sm">Social</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for achievements
+        document.querySelectorAll('.snap-start').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>
